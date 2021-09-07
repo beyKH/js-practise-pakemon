@@ -1,3 +1,22 @@
 .container-made{
   max-width: 800px;
 }
+
+.pakemon{
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%),
+  0 3px 6px rgb(0 0 0 / 23%);
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.pakemon:hover{
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%),
+  0 6px 6px rgb(0 0 0 / 23%);
+}
+
+.pakemon__top{
+  padding: 20px 0;
+  background-color: #f5f5f5;
+}

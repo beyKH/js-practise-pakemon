@@ -1,9 +1,23 @@
-var elInput = document.querySelector(".js-input");
-var elOutput = document.querySelector(".js-output");
-var elSubmitBtn = document.querySelector(".js-submit");
-var elForm = document.querySelector(".js-form");
+// DOMS
+var elPakemonList = document.querySelector('.pakemon-list');
 
-elForm.addEventListener("submit", function (e) {
-  e.preventDefault();
 
-})
+var elPakemonTemplate = document.querySelector(".pakemon__template").content;
+
+// GETTING OBJS OF PAKEMONS
+var pakemons = pokemons;
+
+// CREATEING FRAGMENT
+var elPakemonFragment = document.createDocumentFragment();
+
+for (const pakemon of pakemons) {
+
+  var elPakemonTemplateItem = elPakemonTemplate.cloneNode(true);
+  elPakemonTemplateItem.querySelector(".pakemon__img").src  = pakemon.img;
+  elPakemonTemplateItem.querySelector(".pakemon__name").textContent = pakemon.name;
+  elPakemonTemplateItem.querySelector(".pakemon__number").textContent = pakemon.num;
+
+  elPakemonFragment.appendChild(elPakemonTemplateItem);
+}
+
+elPakemonList.appendChild(elPakemonFragment);
