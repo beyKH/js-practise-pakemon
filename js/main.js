@@ -1,7 +1,5 @@
 // DOMS
 var elPakemonList = document.querySelector('.pakemon-list');
-
-
 var elPakemonTemplate = document.querySelector(".pakemon__template").content;
 
 // GETTING OBJS OF PAKEMONS
